@@ -1,0 +1,13 @@
+    {% extends 'base.html' %}
+    {% block title %}Home{% endblock %}
+    {% block content %}
+    {% if user.is_authenticated %}
+	  <div style="text-align:center"><font size="40">Instagrades</font></div>
+      <p style="text-align:center">Hi {{ user.username }}</p>
+      <p><a href="{% url 'logout' %}">logout</a></p>
+    {% else %}
+	  <div style="text-align:center"><font size="40">Instagrades</font></div>
+      <p style="text-align:center">You are not logged in</p>
+      <a style="text-align:center" href="{% url 'login' %}">login</a>
+    {% endif %}
+    {% endblock %}
