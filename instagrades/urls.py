@@ -19,10 +19,11 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import include
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myhome.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-   # path('', TemplateView.as_view(template_name='home.html'), name='home'), # new
+    #path('', TemplateView.as_view(template_name='home.html'), name='home'), # new
 ]
