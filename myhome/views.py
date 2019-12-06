@@ -78,7 +78,7 @@ class LogInPageView(TemplateView):
     template_name = 'home.html'
 
 class HomePageView(TemplateView):
-  template_name = 'viewrourou.html'
+  template_name = 'view.html'
 
 
   #@login_required
